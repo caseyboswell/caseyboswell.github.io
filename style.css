@@ -2,6 +2,7 @@ body {
     background-color: darkslategray;
     color: aliceblue;
     font-family: Monaco, Arial, Helvetica;
+    text-align: center;
 }
 
 #main {
