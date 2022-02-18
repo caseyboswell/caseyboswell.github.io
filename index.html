@@ -10,6 +10,7 @@
 
   <body>
     <div id="main">
+
       <h1>Testing Page</h1>
       <h3>SMS links:</h3>
       <!-- iOS sms tests work on a real device, not simulator -->
@@ -20,6 +21,23 @@
       <a href="sms://?&body=Hello%20World">iOS & Android only body</a><br><br>
       <a href="sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World">iOS multiple recipients with body</a><br><br>
       <a href="sms://+15552345678, +15552345679;?&body=Hello%20World">Android multiple recipients with body</a><br><br>
+
+      <button id="btn1">window.open("", '_blank')</button>
+      <script>
+      var btn1 = document.getElementById('btn1')
+      btn1.addEventListener('click', function(){
+        window.open("sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World",'_blank');
+      });
+      </script>
+
+      <button id="btn2">window.location.href = ""</button>
+      <script>
+      var btn2 = document.getElementById('btn2')
+      btn2.addEventListener('click', function(){
+        window.location.href = "sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World";
+      });
+      </script>
+
     </div>
   </body>
 </html>
