@@ -12,7 +12,14 @@
     <div id="main">
 
       <h1>Internal Page</h1>
-        <a href="index.html">Home</a>
+        <a href="index.html">Home</a><br><br>
+        <button id="useragent">useragent</button>
+      <script>
+        var useragent = document.getElementById('useragent')
+        useragent.addEventListener('click', function(){
+          alert(navigator.userAgent);
+        });
+        </script>
 
     </div>
   </body>

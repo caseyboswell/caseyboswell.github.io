@@ -13,6 +13,15 @@
 
       <h1>Testing Page</h1>
 
+      <button id="useragent">useragent</button>
+      <script>
+        var useragent = document.getElementById('useragent')
+        useragent.addEventListener('click', function(){
+          alert(navigator.userAgent);
+        });
+        </script>
+
+
       <h3>Navigation Links</h3>
       <a href="internalPage.html">internal link</a><br><br>
       <a href="https://www.google.com">external link</a><br><br>
@@ -34,14 +43,14 @@
       <a href="sms://?&body=Hello%20World">iOS & Android only body</a><br><br>
       <a href="sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World">iOS multiple recipients with body</a><br><br>
       <a href="sms://+15552345678, +15552345679;?&body=Hello%20World">Android multiple recipients with body</a><br><br>
-      <a href="sms://open?addresses=+15552345678,+15552345679;?&body=Hello World">iso multiple w/ bug in body</a><br><br>
-      <a href="sms://open?addresses= +15552345678,+15552345679;?&body=Hello%20World">iso multiple w/ bug in numbers</a><br><br>
 
       <button id="btn1">window.open("", '_blank')</button>
       <script>
       var btn1 = document.getElementById('btn1')
       btn1.addEventListener('click', function(){
-        window.open("sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World",'_blank');
+        if(navigator.userAgent.match(/iPhone/i)){
+          window.open("sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World",'_blank');
+        } 
       });
       </script>
 
