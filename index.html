@@ -14,8 +14,16 @@
       <h1>Testing Page</h1>
 
       <h3>Navigation Links</h3>
-      <a href="internalPage.html">Internal link</a><br><br>
-      <a href="https://www.google.com/">External link</a><br><br>
+      <a href="internalPage.html">internal link</a><br><br>
+      <a href="https://www.google.com">external link</a><br><br>
+      <a href="https://www.google.com" target="_blank">special link (_blank)</a><br><br>
+      <a href="https://www.google.com" target="_self">special link (_self)</a><br><br>
+      <a href="#" onclick="window.location.href='https://www.google.com';">window.location.href</a><br><br>
+      <a href="#" onclick="window.location='https://www.google.com';">window.location</a><br><br>
+      <a href="#" onclick="top.location.href='https://www.google.com';">top.location.href</a><br><br>
+      <a href="#" onclick="top.location='https://www.google.com';">top.location</a><br><br>
+      <a href="#" onclick="window.open('https://www.google.com');">window.open("")</a><br><br>
+
 
       <h3>SMS links:</h3>
       <!-- iOS sms tests work on a real device, not simulator -->
