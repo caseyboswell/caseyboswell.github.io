@@ -4,6 +4,7 @@
   <head>
     <title>Testing Page</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="functions.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -14,7 +15,7 @@
       <h1>Testing Page</h1>
 
       <button id="useragent">useragent</button>
-      <script>
+        <script>
         var useragent = document.getElementById('useragent')
         useragent.addEventListener('click', function(){
           alert(navigator.userAgent);
