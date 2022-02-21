@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Internal Page</title>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <script src="functions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div id="main">
+
+      <h1>Internal Page: fr/home</h1>
+        <a href="/index.html">Home</a><br><br>
+        <button id="useragent">useragent</button>
+        <script>
+        var useragent = document.getElementById('useragent')
+        useragent.addEventListener('click', function(){
+          alert(navigator.userAgent);
+        });
+        </script>
+
+    </div>
+  </body>
+</html>
