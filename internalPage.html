@@ -22,6 +22,18 @@
         });
         </script>
 
+      <button id="headers">headers</button>
+      <script>
+        var headers = document.getElementById('headers')
+        headers.addEventListener('click', function(){
+          var req = new XMLHttpRequest();
+          req.open('GET', document.location, false);
+          req.send(null);
+          var headers = req.getAllResponseHeaders().toLowerCase();
+          alert(headers);
+        });
+      </script>
+
     </div>
   </body>
 </html>
