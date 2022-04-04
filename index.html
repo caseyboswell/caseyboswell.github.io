@@ -95,6 +95,12 @@
 
     <br><br><br>
     <h2>Javascript push notification links:</h2>
+    <script>
+      var seconds = 10; //seconds from now on
+      var message = "It is Happy Hour now! Check it out!"; //the message
+      var button = "Open App"; //the text of the button
+      window.location.href = "sendlocalpushmsg://push.send?s="+ seconds +"=msg!"+ message +"&!#"+ button +"";
+    </script>
     <a href="#" onclick="pushNotification(0);">Send push 0 seconds from now</a><br><br>
     <a href="#" onclick="pushNotification(10);">Send push 10 seconds from now</a><br><br>
 
