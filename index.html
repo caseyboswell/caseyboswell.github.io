@@ -51,6 +51,7 @@
       <a href="#" onclick="top.location='internalPage.html';">top.location</a><br><br>
       <a href="#" onclick="window.open('internalPage.html');">window.open('')</a><br><br>
       <a href="#" onClick="window.open('internalPage.html', '_blank')">window.open('','_blank')</a><br><br>
+      <a href="#" onClick="document.location.reload()">document.location.reload()</a><br><br>
       <p>External Links (www.google.com)</p>
       <a href="https://www.google.com">external link</a><br><br>
       <a href="https://www.google.com" target="_blank">special link (_blank)</a><br><br>
@@ -91,6 +92,11 @@
         window.location.href = "sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World";
       });
       </script>
+
+    <br><br><br>
+    <h2>Javascript push notification links:</h2>
+    <a href="#" onclick="pushNotification(0);">Send push 0 seconds from now</a><br><br>
+    <a href="#" onclick="pushNotification(10);">Send push 10 seconds from now</a><br><br>
 
     </div>
   </body>
