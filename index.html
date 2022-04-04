@@ -95,8 +95,29 @@
 
     <br><br><br>
     <h2>Javascript push notification links:</h2>
-    <a href="sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton">Send Local Push in 5 Seconds</a><br><br>
 
+    <a href="sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton">Send Local Push in 5 Seconds using href=pushUrl</a><br><br>
+
+    <button id="btn3">window.location.href=pushUrl</button><br><br>
+    <script>
+    var btn3 = document.getElementById('btn3')
+    btn3.addEventListener('click', function(){
+      window.location.href = "sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton";
+    });
+    </script>
+
+    <button id="btn4">replaceState()</button><br><br>
+    <script>
+    var btn4 = document.getElementById('btn4')
+    btn4.addEventListener('click', function(){
+      const nextURL = 'sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton';
+      const nextTitle = document.title;
+      const nextState = { additionalInformation: 'Updated the URL with JS' };
+      window.history.replaceState()
+    });
+    </script>
+
+    <br><br>
     </div>
   </body>
 </html>
