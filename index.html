@@ -40,7 +40,7 @@
 
 
       <br><br>
-      <h2>Navigation Links</h2>
+      <h2>Navigation</h2>
       <p>Internal Links (internalPage.html)</p>
       <a href="internalPage.html">internal link</a><br><br>
       <a href="internalPage.html" target="_blank">special link (_blank)</a><br><br>
@@ -65,7 +65,7 @@
 
 
       <br>
-      <h2>SMS links:</h2>
+      <h2>SMS</h2>
       <!-- iOS sms tests work on a real device, not simulator -->
       <a href="sms:+4915118956490">iOS no body</a><br><br>
       <a href='sms://open?addresses=+1-800-555-5555?&body=Hello%20World' target='_blank'>iOS with body</a><br><br>
@@ -94,28 +94,9 @@
       </script>
 
     <br><br><br>
-    <h2>Javascript push notification links:</h2>
+    <h2>Javascript Push Notification</h2>
 
     <a href="sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton">Send Local Push in 5 Seconds using href=pushUrl</a><br><br>
-
-    <button id="btn3">window.location.href=pushUrl</button><br><br>
-    <script>
-    var btn3 = document.getElementById('btn3')
-    btn3.addEventListener('click', function(){
-      window.location.href = "sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton";
-    });
-    </script>
-
-    <button id="btn4">replaceState()</button><br><br>
-    <script>
-    var btn4 = document.getElementById('btn4')
-    btn4.addEventListener('click', function(){
-      const nextURL = 'sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton';
-      const nextTitle = document.title;
-      const nextState = { additionalInformation: 'Updated the URL with JS' };
-      window.history.replaceState()
-    });
-    </script>
 
     <br><br>
     </div>
