@@ -97,15 +97,13 @@
     <h2>Javascript Push Notification</h2>
 
     <!-- this works on android, but not on ios -->
-    <a href="sendlocalpushmsg://push.send?s=5=msg!Test&amp;!#TestButton">Send Local Push in 5 Seconds using href=pushUrl</a><br><br>
-    
     <button id="javaPush">java push notification test</button><br><br>
     <script>
       var javaPush = document.getElementById('javaPush')
       javaPush.addEventListener('click', function(){
         var title = "Notification Title"; //title of the notification
         var message = "Test"; //notification message
-        var seconds = 5; //seconds from now on
+        var seconds = 0; //seconds from now on
         window.location.href = "sendlocalpushmsg://push.send?s="+ seconds +"=msg!"+ message +"&!#"+ title +"";
       });
     </script>
