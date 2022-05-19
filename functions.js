@@ -4,7 +4,9 @@ function testFunction() {
 
 function pushNotificaiton(seconds) {
   alert('pushNotification() called!');
-  var message = "Javascript push notification test"; //the message
-  var button = "Open App"; //the text of the button
-  window.location.href = "sendlocalpushmsg://push.send?s="+ seconds +"=msg!"+ message +"&!#"+ button +"";
+  var title = "Notification Title"; //title of the notification
+  var message = "Test"; //notification message
+  var seconds = 5; //seconds from now on
+  window.location.href = "sendlocalpushmsg://push.send?s="+ seconds +"=msg!"+ message +"&!#"+ title +"";
 }
+
