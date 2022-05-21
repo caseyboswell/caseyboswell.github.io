@@ -26,7 +26,7 @@
         });
       </script>
 
-    <button id="headers">headers</button>
+    <button id="headers">headers</button><br><br>
     <script>
       var headers = document.getElementById('headers')
       headers.addEventListener('click', function(){
@@ -36,7 +36,20 @@
         var headers = req.getAllResponseHeaders().toLowerCase();
         alert(headers);
       });
-    </script>
+      </script>
+
+      <button id="darkModeOnButton">get darkModeOn</button>
+      <script>
+        var darkModeOnButton = document.getElementById('darkModeOnButton')
+        darkModeOnButton.addEventListener('click', function(){
+          alert(darkModeOn)
+          if (typeof darkModeOn == 'undefined') {
+            alert('darkModeOn is defined');
+          } else {
+            alert('darkModeOn is not defined, ensure darkModeOnPing is enabled')
+          }
+        });
+      </script>
 
 
       <br><br>
