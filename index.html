@@ -17,7 +17,7 @@
       <a href="mediaTesting.html">Media Testing Page</a><br><br>
       <a href="elementTesting.html">Element Testing Page</a><br><br>
 
-      <h2>Current Page Data</h2>
+      <h2>Data Collection</h2>
 
       <button id="useragent">useragent</button><br><br>
       <script>
@@ -27,33 +27,38 @@
         });
       </script>
 
-    <button id="headers">headers</button><br><br>
-    <script>
-      var headers = document.getElementById('headers')
-      headers.addEventListener('click', function(){
-        var req = new XMLHttpRequest();
-        req.open('GET', document.location, false);
-        req.send(null);
-        var headers = req.getAllResponseHeaders().toLowerCase();
-        alert(headers);
-      });
-      </script>
-
-      <button id="darkModeOnButton">get darkModeOn</button>
+      <button id="headers">headers</button><br><br>
       <script>
-        var darkModeOnButton = document.getElementById('darkModeOnButton')
-        darkModeOnButton.addEventListener('click', function(){
-          alert(darkModeOn)
-          if (typeof darkModeOn == 'undefined') {
-            alert('darkModeOn is defined');
-          } else {
-            alert('darkModeOn is not defined, ensure darkModeOnPing is enabled')
-          }
+        var headers = document.getElementById('headers')
+        headers.addEventListener('click', function(){
+          var req = new XMLHttpRequest();
+          req.open('GET', document.location, false);
+          req.send(null);
+          var headers = req.getAllResponseHeaders().toLowerCase();
+          alert(headers);
         });
+        </script>
+
+      <button id="getappversion">getappversion://</button><br><br>
+      <script>
+        var getappversion = document.getElementById('getappversion')
+        getappversion.addEventListener('click', function(){
+          window.location.href = "getappversion://";
+          alert(versionNumber);
+          alert(bundleNumber);
+        })
       </script>
 
+      <button id="getonesignalplayerid">getonesignalplayerid://</button><br><br>
+      <script>
+        var getonesignalplayerid = document.getElementById('getonesignalplayerid')
+        getonesignalplayerid.addEventListener('click', function(){
+          window.location.href = "getonesignalplayerid://";
+          alert(onesignalplayerid); 
+        })
+      </script>
 
-      <br><br>
+      <br>
       <h2>Navigation</h2>
       <p>Internal Links (internalPage.html)</p>
       <a href="internalPage.html">internal link</a><br><br>
@@ -105,23 +110,23 @@
       btn2.addEventListener('click', function(){
         window.location.href = "sms://open?addresses=+15552345678,+15552345679;?&body=Hello%20World";
       });
+        </script>
+
+      <br><br><br>
+      <h2>Javascript Push Notification</h2>
+
+      <button id="javaPush">java push notification test</button><br><br>
+      <script>
+        var javaPush = document.getElementById('javaPush')
+        javaPush.addEventListener('click', function(){
+          var title = "Notification Title"; //title of the notification
+          var message = "Test"; //notification message
+          var seconds = 1; //seconds from now on
+          window.location.href = "sendlocalpushmsg://push.send?s="+ seconds +"=msg!"+ message +"&!#"+ title +"";
+        });
       </script>
-
-    <br><br><br>
-    <h2>Javascript Push Notification</h2>
-
-    <button id="javaPush">java push notification test</button><br><br>
-    <script>
-      var javaPush = document.getElementById('javaPush')
-      javaPush.addEventListener('click', function(){
-        var title = "Notification Title"; //title of the notification
-        var message = "Test"; //notification message
-        var seconds = 1; //seconds from now on
-        window.location.href = "sendlocalpushmsg://push.send?s="+ seconds +"=msg!"+ message +"&!#"+ title +"";
-      });
-    </script>
                 
-    <br><br>
+      <br><br>
     </div>
   </body>
 </html>
