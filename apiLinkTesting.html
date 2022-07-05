@@ -20,7 +20,7 @@
         <script>
           var getappversion = document.getElementById('getappversion')
           getappversion.addEventListener('click', function(){
-            window.location.href = "getappversion://";
+            // window.location.href = "getappversion://";
             alert(versionNumber);
             alert(bundleNumber);
           })
@@ -30,7 +30,7 @@
         <script>
           var getonesignalplayerid = document.getElementById('getonesignalplayerid')
           getonesignalplayerid.addEventListener('click', function(){
-            window.location.href = "getonesignalplayerid://";
+            // window.location.href = "getonesignalplayerid://";
             alert(onesignalplayerid);
           })
         </script>
@@ -39,21 +39,19 @@
         <script>
           var both = document.getElementById('both')
           both.addEventListener('click', function(){
-            window.location.href = "getappversion://";
+            
             alert(versionNumber);
             alert(bundleNumber);
-            window.location.href = "getonesignalplayerid://";
+            // window.location.href = "getonesignalplayerid://";
             alert(onesignalplayerid);
           })
         </script>
 
-        <!-- <script>
-            if (isWebViewBrowser()) {
-              // Whatever special WebViewGold API triggers you want for the page
-              window.location.href = "getonesignalplayerid://";
-               
-            }
-        </script> -->
+        <!-- Loads the variables into scope -->
+        <script>
+            window.location.href = "getappversion://";
+            window.location.href = "getonesignalplayerid://";
+        </script>
 
     </div>
   </body>
