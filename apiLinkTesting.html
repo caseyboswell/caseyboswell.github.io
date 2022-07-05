@@ -16,12 +16,6 @@
 
         <a href="index.html">Home</a><br><br><br>
 
-        <p>This page automatically calls some API links in succession (getonesignalplayerid and getappversion) when using the WebViewGold browser.</p><br>
-        <code>window.location.href = "getonesignalplayerid://";</code><br>
-        <code>window.location.href = "getappversion://";</code><br><br>
-        <p>You need to include the script for these calls at the END of your webpage script so it does not interupt the loading of prior page elements.</p><br>
-        <p>You can also call these APIs individually using the buttons below:</p><br>
-
         <script>
             function getMobileOperatingSystem() {
                 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -88,13 +82,28 @@
           })
         </script>
 
+        <a href="getonesignalplayerid://">getonesignalplayerid</a><br>
+        <a href="getappversion://">getappversion</a><br>
+
+        <button id="both" class="button">both at the same time</button><br><br>
         <script>
+          var both = document.getElementById('both')
+          both.addEventListener('click', function(){
+            window.location.href = "getappversion://";
+            alert(versionNumber);
+            alert(bundleNumber);
+            window.location.href = "getonesignalplayerid://";
+            alert(onesignalplayerid);
+          })
+        </script>
+
+        <!-- <script>
             if (isWebViewBrowser()) {
               // Whatever special WebViewGold API triggers you want for the page
               window.location.href = "getonesignalplayerid://";
                
             }
-        </script>
+        </script> -->
 
     </div>
   </body>
