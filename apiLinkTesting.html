@@ -68,8 +68,13 @@
         <script>
             // window.location.href = "getappversion://";
             // window.location.href = "getonesignalplayerid://";
-            // window.open("getappversion://");
-            window.open("getonesignalplayerid://");
+            var myLinks = [
+            "getappversion://",
+            "getonesignalplayerid://"
+            ]
+            for (var i = 0; i < myLinks.length; i ++) {
+              window.location.href = myLinks[i];
+            } 
         </script>
 
     </div>
