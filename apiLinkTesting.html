@@ -35,10 +35,22 @@
           })
         </script>
 
-        <button id="both" class="button">both at the same time</button><br><br>
+        <button id="both" class="button">app then onesignalid</button><br><br>
         <script>
           var both = document.getElementById('both')
           both.addEventListener('click', function(){
+            
+            alert(versionNumber);
+            alert(bundleNumber);
+            // window.location.href = "getonesignalplayerid://";
+            alert(onesignalplayerid);
+          })
+        </script>
+
+        <button id="both2" class="button">onesignal then app</button><br><br>
+        <script>
+          var both2 = document.getElementById('both2')
+          both2.addEventListener('click', function(){
             
             alert(versionNumber);
             alert(bundleNumber);
