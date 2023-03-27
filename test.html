@@ -11,6 +11,11 @@
   <body>
     <div id="main">
 
+        <h1>Test for Form Submission -> In-App Tab Issue</h1>
+
+        <p>Press "submit" and an in-app tab should open to a page that has already logged in because of the form submission.</p>
+        <p>The issue is that on iOS, the in-app tab does not register the form submission details, hence, the page is not logged in. Android works fine.</p>
+
         <form action="https://hwenergy.app/login" method="POST" target="_blank" id="hwenergy">
           <input type="text" name="username" id="username" value="demo@zwemco.cloud">
           <input type="text" name="password" id="password" value="yfwNQY2AhHUp">
@@ -20,7 +25,7 @@
 
       <br><br>
 
-        <script>
+        <!-- <script>
             function getMobileOperatingSystem() {
                 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
                 // Windows Phone must come first because its UA also contains "Android"
@@ -96,7 +101,7 @@
                 window.location.href = "getappversion://"; 
               }
             }
-        </script>
+        </script> -->
 
     </div>
   </body>
